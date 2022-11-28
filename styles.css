@@ -1,0 +1,165 @@
+/* ------------------  RESET  --------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------------  VARIABLES  --------------*/
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --VeryDarkCyan: hsl(158, 46%, 19%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  /* --DarkGrayishBlue: hsl(228, 12%, 48%); */
+  --DarkGrayishBlue: hsl(230, 3%, 64%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* ------------------  BODY  --------------*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: var(--Cream);
+}
+
+/* ------------------  MAIN  --------------*/
+.card {
+  width: 344px;
+  height: 612px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 68px auto;
+  background-color: var(--White);
+  box-shadow: 0px 5px 14px -5px var(--DarkCyan);
+}
+
+/* ------------------  FIRST SECTION  --------------*/
+.card__first-section__image {
+  width: 100%;
+}
+
+/* ------------------  SECOND SECTION  --------------*/
+.card__second-section__product-type {
+  text-transform: uppercase;
+  color: var(--DarkGrayishBlue);
+  font-size: 1em;
+  letter-spacing: 3px;
+  margin: 18px 24px 8px 24px;
+}
+
+.card__second-section__title {
+  font-family: "Fraunces", serif;
+  margin: 0 24px 16px 24px;
+  font-size: 2.2em;
+  color: var(--VeryDarkBlue);
+  line-height: 34px;
+}
+
+.card__second-section__description {
+  margin: 0 24px 44px 24px;
+  color: var(--DarkGrayishBlue);
+  font-size: 0.95em;
+  line-height: 22px;
+}
+
+.card__second-section__price {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 24px 16px 24px;
+}
+
+.card__second-section__discount {
+  font-family: "Fraunces", serif;
+  font-size: 2.3em;
+  color: var(--DarkCyan);
+}
+
+.card__second-section__value {
+  text-decoration: line-through;
+  color: var(--Dark-Grayish-Blue);
+}
+
+.card__second-section__button {
+  width: 296px;
+  height: 50px;
+  background-color: var(--DarkCyan);
+  border: none;
+  border-radius: 8px;
+  color: var(--White);
+  font-size: 1.1em;
+  font-weight: 700;
+  display: block;
+  margin: auto;
+  box-shadow: 0px 0px 14px -1px var(--DarkGrayishBlue);
+  transition: background-color 0.3s ease;
+}
+
+.card__second-section__button__icon {
+  margin-right: 12px;
+}
+
+.card__second-section__button:hover {
+  cursor: pointer;
+  background-color: var(--VeryDarkCyan);
+}
+
+/* ------------------  FOOTER  --------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--DarkCyan);
+  text-decoration: none;
+}
+
+/* ------------------  DESKTOP  --------------*/
+/* ------------------  MEDIA QUERIES  --------------*/
+/* ------------------  >(620px)  --------------*/
+@media (min-width: 620px) {
+  .card {
+    width: 600px;
+    height: 450px;
+    display: flex;
+    margin: 175px auto 75px;
+  }
+
+  .card__first-section {
+    width: 300px;
+  }
+
+  .card__first-section__image {
+    content: url(/images/image-product-desktop.jpg);
+  }
+
+  .card__second-section {
+    width: 300px;
+  }
+
+  .card__second-section__product-type {
+    margin: 32px 24px 16px 24px;
+  }
+
+  .card__second-section__description {
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  .card__second-section__price {
+    margin-bottom: 26px;
+  }
+
+  .card__second-section__button {
+    width: 250px;
+  }
+}
