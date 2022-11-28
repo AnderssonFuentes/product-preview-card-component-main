@@ -139,7 +139,7 @@ body {
   }
 
   .card__first-section__image {
-    content: url(/images/image-product-desktop.jpg);
+    content: url(images/image-product-desktop.jpg);
   }
 
   .card__second-section {
